@@ -27,13 +27,17 @@ function App() {
       <div className='fight'>
         <div className='competitor'>
           <p style={{ fontSize: `${snakeSize}px` }}> {snakeSize > 80 ? '🐉' : '🐍'}</p>
-          <button disabled={!isOpen} onClick={() => setSnakeSize(snakeSize + 10)}>Grow the snek</button>
-          <button disabled={!isOpen} onClick={() => setSnakeSize(snakeSize - 10)}>Shrink the snek</button>
+          <div>
+            <button disabled={!isOpen} onClick={() => setSnakeSize(snakeSize + 10)}>Grow the snek</button>
+            <button disabled={!isOpen} onClick={() => setSnakeSize(snakeSize - 10)}>Shrink the snek</button>
+          </div>
         </div>
         <div className='competitor'>
           <p style={{ fontSize: `${lionSize}px` }}> {lionSize > 80 ? '🦁' : '🐈'}</p>
-          <button disabled={!isOpen} onClick={() => setLionSize(lionSize + 10)}>Feed the cat</button>
-          <button disabled={!isOpen} onClick={() => setLionSize(lionSize - 10)}>Shrink the cat</button>
+          <div>
+            <button disabled={!isOpen} onClick={() => setLionSize(lionSize + 10)}>Feed the cat</button>
+            <button disabled={!isOpen} onClick={() => setLionSize(lionSize - 10)}>Shrink the cat</button>
+          </div>
         </div>
       </div>
       <OpenOrClosed isOpen={isOpen} />

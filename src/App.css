@@ -50,6 +50,12 @@
 
 .competitor {
   margin: 5px;
+  display: flex;
+}
+
+.competitor p {
+  background-color: rgba(35, 177, 142, .87);
+  width: fit-content;
 }
 
 .competitor button {
