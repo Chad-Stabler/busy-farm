@@ -27,24 +27,24 @@ function App() {
       <div className='fight'>
         <div className='competitor'>
           <p style={{ fontSize: `${snakeSize}px` }}> {snakeSize > 80 ? '🐉' : '🐍'}</p>
-          <button onClick={() => setSnakeSize(snakeSize + 10)}>Grow the snek</button>
-          <button onClick={() => setSnakeSize(snakeSize - 10)}>Shrink the snek</button>
+          <button disabled={!isOpen} onClick={() => setSnakeSize(snakeSize + 10)}>Grow the snek</button>
+          <button disabled={!isOpen} onClick={() => setSnakeSize(snakeSize - 10)}>Shrink the snek</button>
         </div>
         <div className='competitor'>
           <p style={{ fontSize: `${lionSize}px` }}> {lionSize > 80 ? '🦁' : '🐈'}</p>
-          <button onClick={() => setLionSize(lionSize + 10)}>Feed the cat</button>
-          <button onClick={() => setLionSize(lionSize - 10)}>Shrink the cat</button>
+          <button disabled={!isOpen} onClick={() => setLionSize(lionSize + 10)}>Feed the cat</button>
+          <button disabled={!isOpen} onClick={() => setLionSize(lionSize - 10)}>Shrink the cat</button>
         </div>
       </div>
       <OpenOrClosed isOpen={isOpen} />
       <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? 'Close for the night' : 'Open for the day'}</button>
       <div className='stampede'>
         <Stampede animals={animals}/>
-        <button onClick={() => handleAnimalClick('deer')}>Add a deer</button>
-        <button onClick={() => handleAnimalClick('giraffe')}>Add a giraffe</button>
-        <button onClick={() => handleAnimalClick('monkey')}>Add a monkey</button>
-        <button onClick={() => handleAnimalClick('sheep')}>Add a sheep</button>
-        <button onClick={() => handleRetireClick()}>Send the last animal home</button>
+        <button disabled={!isOpen} onClick={() => handleAnimalClick('deer')}>Add a deer</button>
+        <button disabled={!isOpen} onClick={() => handleAnimalClick('giraffe')}>Add a giraffe</button>
+        <button disabled={!isOpen} onClick={() => handleAnimalClick('monkey')}>Add a monkey</button>
+        <button disabled={!isOpen} onClick={() => handleAnimalClick('sheep')}>Add a sheep</button>
+        <button disabled={!isOpen} onClick={() => handleRetireClick()}>Send the last animal home</button>
       </div>
     </div>
   );
