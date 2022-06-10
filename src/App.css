@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 .App {
   text-align: center;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App-logo {
@@ -52,4 +57,21 @@
 
 .competitor button {
   margin: 3px;
+}
+
+.open {
+  background-color: greenyellow;
+  font-family: 'Cedarville Cursive', cursive;
+  width: 50%;
+}
+
+.closed {
+  background-color: red;
+  font-family: sans-serif;
+  width: 50%;
+}
+
+button {
+  width: fit-content;
+  margin: 5px;
 }
