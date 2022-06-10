@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .App {
   display: flex;
@@ -82,4 +83,12 @@ button {
   background-color: bisque;
   margin: 1px;
   border: 1px solid orange;
+}
+
+button {
+  background-color: #354d7b;
+  color: rgb(165, 150, 173);
+  border-color: rgb(223, 39, 122);
+  border-radius: 2px;
+  font-family: 'Lobster', cursive;
 }
