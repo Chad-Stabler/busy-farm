@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -35,4 +37,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.fight {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.competitor {
+  margin: 5px;
+}
+
+.competitor button {
+  margin: 3px;
 }
