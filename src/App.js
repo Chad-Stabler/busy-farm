@@ -3,6 +3,7 @@ import { useState } from 'react';
 import OpenOrClosed from './OpenOrClosed';
 import backgroundImg from './background.jpg';
 import Stampede from './Stampede';
+import CustomButton from './CustomButton';
 
 
 function App() {
@@ -28,27 +29,27 @@ function App() {
         <div className='competitor'>
           <p style={{ fontSize: `${snakeSize}px` }}> {snakeSize > 80 ? '🐉' : '🐍'}</p>
           <div>
-            <button disabled={!isOpen} onClick={() => setSnakeSize(snakeSize + 10)}>Grow the snek</button>
-            <button disabled={!isOpen} onClick={() => setSnakeSize(snakeSize - 10)}>Shrink the snek</button>
+            <CustomButton disabled={!isOpen} onClick={() => setSnakeSize(snakeSize + 10)}>Grow the snek</CustomButton>
+            <CustomButton disabled={!isOpen} onClick={() => setSnakeSize(snakeSize - 10)}>Shrink the snek</CustomButton>
           </div>
         </div>
         <div className='competitor'>
           <p style={{ fontSize: `${lionSize}px` }}> {lionSize > 80 ? '🦁' : '🐈'}</p>
           <div>
-            <button disabled={!isOpen} onClick={() => setLionSize(lionSize + 10)}>Feed the cat</button>
-            <button disabled={!isOpen} onClick={() => setLionSize(lionSize - 10)}>Shrink the cat</button>
+            <CustomButton disabled={!isOpen} onClick={() => setLionSize(lionSize + 10)}>Feed the cat</CustomButton>
+            <CustomButton disabled={!isOpen} onClick={() => setLionSize(lionSize - 10)}>Shrink the cat</CustomButton>
           </div>
         </div>
       </div>
       <OpenOrClosed isOpen={isOpen} />
-      <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? 'Close for the night' : 'Open for the day'}</button>
+      <CustomButton onClick={() => setIsOpen(!isOpen)}>{isOpen ? 'Close for the night' : 'Open for the day'}</CustomButton>
       <div className='stampede'>
         <Stampede animals={animals}/>
-        <button disabled={!isOpen} onClick={() => handleAnimalClick('deer')}>Add a deer</button>
-        <button disabled={!isOpen} onClick={() => handleAnimalClick('giraffe')}>Add a giraffe</button>
-        <button disabled={!isOpen} onClick={() => handleAnimalClick('monkey')}>Add a monkey</button>
-        <button disabled={!isOpen} onClick={() => handleAnimalClick('sheep')}>Add a sheep</button>
-        <button disabled={!isOpen} onClick={() => handleRetireClick()}>Send the last animal home</button>
+        <CustomButton disabled={!isOpen} onClick={() => handleAnimalClick('deer')}>Add a deer</CustomButton>
+        <CustomButton disabled={!isOpen} onClick={() => handleAnimalClick('giraffe')}>Add a giraffe</CustomButton>
+        <CustomButton disabled={!isOpen} onClick={() => handleAnimalClick('monkey')}>Add a monkey</CustomButton>
+        <CustomButton disabled={!isOpen} onClick={() => handleAnimalClick('sheep')}>Add a sheep</CustomButton>
+        <CustomButton disabled={!isOpen} onClick={() => handleRetireClick()}>Send the last animal home</CustomButton>
       </div>
     </div>
   );
