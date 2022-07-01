@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 
 export default function Table({ data }) {
   return (
-    <div style={{ maxWidth: '100%' }}>
+    <div style={{ maxWidth: '100%', marginBottom: '100px' }}>
       <MaterialTable
         columns={
           [

@@ -8,12 +8,12 @@ export default function Charts() {
     { quarter: 4, units: 461192 }
   ];
 
-  return (<>
+  return (<div style={{ width: '55%' }}>
     <VictoryChart domainPadding={25}>
       <VictoryAxis tickValues={[1, 2, 3, 4]} tickFormat={['Quarter 1', 'Quarter 2', 'Quarter 3', 'Quarter 4']} />
       <VictoryAxis dependentAxis tickFormat={(x) => (`$${x / 1000}k`)} />
       <VictoryBar data={chartData} x='quarter' y='units' />
     </VictoryChart>
     <VictoryPie data={chartData} x='quarter' y='units' />
-  </>);
+  </div>);
 }
