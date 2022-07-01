@@ -4,7 +4,7 @@ import Table from './Table';
 
 export default function Admin() {
   return (<div>
-    <Charts data={data} />
+    <Charts />
     <Table data={data}/>
   </div>);
 }
